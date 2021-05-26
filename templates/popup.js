@@ -5,6 +5,7 @@ button.addEventListener('click',()=>{
     //console.log('here');
     button.classList.add('activebtn');
     summary.classList.add('active');
+    summary.classList.add('loading');
     //chrome.runtime.sendMessage({message:'generate'},res=>summary.innerHTML=res);
     //console.log("message sent from popup");
     var videourl="https://cors-anywhere.herokuapp.com/";
@@ -24,6 +25,7 @@ button.addEventListener('click',()=>{
         //     msg=response.message.message[0];
         // }
         //summary.innerHTML="value2";
+        summary.classList.remove('loading');
         summary.innerHTML=response.message.message[0];
         //return response.message[0];
       });
