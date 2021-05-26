@@ -13,6 +13,7 @@ chrome.runtime.onMessage.addListener(
     //             "from the extension");
     if (request.message == "generate")
     {  
+      console.log('message received')
       // var videourl="";
       // chrome.tabs.onActivated.addListener(tab=>{
       //   chrome.tabs.get(tab.tabId,current_tab_info=>{
@@ -25,12 +26,16 @@ chrome.runtime.onMessage.addListener(
       fetch(`http://127.0.0.1:5000/api/summarize?youtube_url=${request.url}`)
       .then(res=>res.json())
       .then(result=>{
+        console.log('reached near message');
+        console.log(result.message[0]);
         sendResponse({message: result});
+        //sendResponse({message:"hi there"});
       })
       .catch(err=>{
+        console.log('error generated')
         sendResponse({message:err})
       });
-      
+      return true;
     }
   }
       
