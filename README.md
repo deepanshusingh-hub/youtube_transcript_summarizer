@@ -34,4 +34,4 @@ $ pip install requirements.txt
 $ python app.py
 
 ````
-## [Demo Images](summarizer_model/ss1.jpeg)
+![Demo Images](summarizer_model/ss1.jpeg)
