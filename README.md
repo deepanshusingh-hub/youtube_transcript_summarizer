@@ -11,6 +11,7 @@ This uses Flask framework as a back-end to receive API calls and then respond wi
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
+![](/summarizer_model/demonstration.gif)
 ## Setting up project
 
 #### Adding a virtual environment 
@@ -31,3 +32,6 @@ $ <my_env_name>\Scripts\activate
 $ cd my-project
 $ pip install requirements.txt
 $ python app.py
+
+````
+## [Demo Images](summarizer_model/ss1.jpeg)
